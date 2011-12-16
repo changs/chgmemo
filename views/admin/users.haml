@@ -1,0 +1,21 @@
+%table{ class: "bordered_table zebra-striped" }
+  %thead
+    %tr
+      %th Username
+      %th Fullname
+      %th Email
+      %th Delete
+      %th Admin
+  %tbody
+    -@users.each do |u|
+      %tr
+        %td= u.username
+        %td= u.fullname
+        %td= u.email
+        %td <a href="/admin/user_delete/#{u.id}">Delete</a>
+        %td
+          -if u.admin
+            Admin
+          -else
+            <a href="/admin/user_admin/#{u.id}">Make admin</a>
+

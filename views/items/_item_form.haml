@@ -1,0 +1,14 @@
+-caption = t.item.add
+-caption = t.item.update if @request.path.include?('edit')
+%form{ action: "/item/create", method: "post"}
+  %fieldset
+    .clearfix
+      %label{ for: "question" }= t.item.question 
+      .input
+        %input{ name: "question", type: "text", size: 30, maxlength: "50", value: @item.question }
+    .clearfix
+      %label{ for: "answer" }= t.item.answer 
+      .input
+        %input{ name: "answer", type: "text", size: 30, maxlength: "50", value: @item.answer }
+    .input
+      %button{ name: "submit", type: "submit", class: "btn" }= caption

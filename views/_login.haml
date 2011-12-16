@@ -1,0 +1,6 @@
+:css
+  input { width: 100px; }
+%form{ :action => "/login", :method => "post", class: "pull-right"}
+  %input{ :name => "username", :type => "text", :size => "10", placeholder: t.header.username }
+  %input{ :name => "password", :type => "password", :size => "10", placeholder: t.header.password}
+  %button{ :name => "submit", :type => "submit", class: "btn"} Login

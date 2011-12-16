@@ -1,0 +1,4 @@
+<a href="/item/create">#{t.item.create}</a>
+%ul
+- @items.each do |i|
+  %li= "<a href='/item/#{i.id}'>#{i.question} - #{i.answer}</a> <a href='/item/#{i.id}/delete'>X</a>"

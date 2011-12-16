@@ -1,0 +1,56 @@
+header:
+  review: Review
+  items: Items
+  profile: Profile
+  title: We help your brain to remember
+  password: Password
+  username: Username
+  fullname: Fullname
+  email: Email
+  language: Language
+
+items_to_review: "Items to review: "
+all_items: "All items: "
+welcome_msg: Welcome! If you want to improve your way of learning please sign up!
+sign_up: Sign up!
+hello: Hello
+user:
+  edit: Edit profile
+  create: Create an account
+  update: Update
+  delete: Delete my account
+  delete_confirm: Are you sure?
+  delete_confirm_yes: Yes, I want to delete my account.
+  delete_confirm_no: Go back!
+  created: "Your account has been created!"
+  updated: "You account has been updated."
+  deleted: "Your account has been deleted."
+  login_failed: Login failed - Try again
+  logout_success: Logout successful
+  logout: Logout
+
+item: 
+  created: Successfully created
+  updated: Successfully updated
+  deleted: Successfully deleted
+  no_items: You have no items to review.
+  empty: You have no items.
+  show_answer: Show answer
+  edit: Edit
+  grades:
+    ideal: Ideal
+    good: Good
+    pass: Pass
+    bad: Bad
+    none: None
+  add: Add item
+  update: Update item
+  question: Question
+  answer: Answer
+  create: Create a new item
+  items_remembered: !!pl
+    0: Spend some more time here and you'll see your improvment
+    1: You have your first item remebered!
+    n: You remembered %1 items already!
+  item_added_per_week: Item added per week
+  

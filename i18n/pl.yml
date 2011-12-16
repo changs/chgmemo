@@ -1,0 +1,55 @@
+header:
+  review: Powtórka
+  items: Elementy
+  profile: Profil
+  title: Pomożemy Ci zapamiętać
+  password: Hasło
+  username: Login
+  fullname: Imię i nazwisko
+  email: Adres e-mail
+  language: Język
+
+items_to_review: "Elementów do powtórki: "
+all_items: "Wszystkich elementów: "
+welcome_msg: Witaj! Jeśli chcesz polepszyć sposób w jaki się uczysz
+sign_up: Zarejestruj się!
+hello: Witaj
+user:
+  edit: Edytuj profil
+  create: Utwórz konto
+  update: Aktualizuj
+  delete: Usuń konto
+  delete_confirm: Jesteś pewien?
+  delete_confirm_yes: Tak, chcę usunąć moje konto
+  delete_confirm_no: Rezygnuję.
+  created: "Twoje konto zostało stworzone!"
+  updated: "Aktualizacja przebiegła pomyślnie."
+  deleted: "Konto zostało usunięte"
+  login_failed: Błędne dane - spróbuj ponownie
+  logout_success: Wylogowałeś się z systemu
+  logout: Wyloguj
+
+item: 
+  created: Utworzony
+  updated: Aktualizowano
+  deleted: Element został usunięty
+  no_items: Nie ma więcej elementów do powtórki
+  empty: Nie masz jeszcze żadnych elementów
+  show_answer: Pokaż odpowiedź
+  edit: Edytuj
+  grades:
+    ideal: Idealnie
+    good: Dobrze
+    pass: Dostatecznie
+    bad: Źle
+    none: Beznadziejnie
+  add: Dodaj element
+  update: Aktualizuj element
+  question: Pytanie
+  answer: Odpowiedź
+  create: Stwórz nowy element
+  items_remembered: !!pl
+    0: Poświęc trochę czasu na powtórki a zobaczysz tutaj swoje postępy
+    1: Właśnie zapamiętałeś swój pierwszy element!
+    n: Pamiętasz już %1 elementów!
+  item_added_per_week: Liczba dodanych elementów na tydzień

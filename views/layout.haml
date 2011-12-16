@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %title= @title
+    %link(rel="stylesheet" href="/css/bootstrap.css")
+    %script{src: "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"}
+    %script{src: "/js/bootstrap-alerts.js"}
+    %script{src: '/js/jquery.hotkeys.js'}
+    %link(rel="stylesheet" href="/css/style.css")
+  %body
+    .topbar
+      .fill
+        .container
+          %a{ class: "brand", href: "/"} Chgmemo
+          -if logged_in?
+            %ul.nav
+              %li 
+                %a{ href: "/review" }= t.header.review
+              %li
+                %a{ href: "/items" }= t.header.items
+              %li
+                %a{ href: "/user" }= t.header.profile
+          - unless logged_in?
+            =partial :login
+          - else
+            %a{ href: "/logout", class: "pull-right logout" }=t.user.logout
+    .container
+      .content
+        .page-header
+          %h1 Chgmemo <small>#{t.header.title}</small>
+          = show_flash
+        .row
+          .span10
+            =yield
+          .span4
+            - if logged_in?
+              =t.items_to_review
+              =how_many_to_review
+              %br
+              =t.all_items
+              =current_user.items.all.count
+            - else
+              %a{ href: '/en' } <img src="/flag_ung.jpg"></img>
+              %a{ href: '/pl' } <img src="/flag_pl.jpg"></img>
+              %br
+              =t.welcome_msg
+              <br/><br/>
+              %a{href: "/user/create", class: "btn success"}= t.sign_up
+
+      %footer
+        %p &copy; Bartosz Pranczke

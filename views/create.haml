@@ -1,0 +1,41 @@
+-caption = t.user.create
+-caption = t.user.update if @request.path.include?('edit')
+-action = "create"
+-if @request.path.include?('edit')
+  -action = "update"
+
+%form{ :action => "/user/#{action}", :method => "post"}
+  %fieldset
+    .clearfix
+      %label{ for: "username" }= t.header.username
+      .input
+        %input{ :name => "username", :type => "text", maxlength: "15", :size => "30", value: @user.username}
+    .clearfix
+      %label{ for: "fullname" }=t.header.fullname
+      .input
+        %input{ :name => "fullname", :type => "text", :size => "30", maxlength: "25", value: @user.fullname}
+    .clearfix
+      -unless @request.path.include?('edit')
+        %label{ for: "password" }=t.header.password
+        .input
+          %input{ :name => "password", :type => "password", maxlength: "50",  :size => "30"}
+    .clearfix
+      %label{ for: "email" }=t.header.email
+      .input
+        %input{ :name => "email", :type => "text", :size => "30", maxlength: "50", value: @user.email}
+    .clearfix
+      %label{ for: "locale" }=t.header.language
+      .input
+        %select{ id: "locale", name: "locale" }
+          %option{ value: "en"} English
+          %option{ value: "pl" } Polski
+          - code = session[:locale].code
+          :javascript
+            $("#locale option[value='#{code}']").attr('selected','selected')
+    .input    
+      %input{ :name => "submit", :type => "submit", :value => caption, class: "btn"}
+
+-if @request.path.include?('edit')          
+  %hr
+  <br/><br/><br/><br/>
+  %a{class: "btn danger", href: "/user/delete"}= t.user.delete

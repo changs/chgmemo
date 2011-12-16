@@ -1,0 +1,7 @@
+%a{href: "/user/edit"}= t.user.edit
+%p #{t.hello} #{@user.username}
+%p= t.item.items_remembered(items_remembered(current_user))
+%br
+- a = Gchart.line(title: t.item.item_added_per_week, :data => items_added(current_user).reverse,
+                  :axis_with_labels => 'y', max_value: 25 )
+%img{ src: a }

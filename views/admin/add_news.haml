@@ -1,0 +1,26 @@
+:css
+  textarea {
+    width: 400px;
+  }
+
+
+-caption = "Save"
+-caption = "Update" if @request.path.include?('edit')
+%form{ action: "/admin/create_news", method: "post"}
+  %fieldset
+    .clearfix
+      %label{ for: "Title" } Title: 
+      .input
+        %input{ name: "title", type: "text", size: 30, value: @news.title }
+    .clearfix
+      %label{ for: "content" } Content: 
+      .input
+        %textarea{ name: "content", type: "text", rows: 20, cols: 80, value: @news.content }
+    %label{ for: "locale" }=t.header.language
+    .input
+      %select{ name: "locale" }
+        %option{ value: "en", selected: "yes" } English
+        %option{ value: "pl" } Polski
+    %br
+    .input
+      %button{ name: "submit", type: "submit", class: "btn" }= caption

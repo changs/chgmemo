@@ -1,0 +1,7 @@
+- if @items.empty?
+  %p #{t.item.empty} <a href="/item/create">#{t.item.add}</a>
+- else
+    - @items.each do |i|
+        %strong&= i.question
+        = i.answer
+

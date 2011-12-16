@@ -9,4 +9,8 @@ gem 'data_mapper' , "1.1.0"
 gem 'dm-sqlite-adapter' , "1.1.0"
 gem 'haml'
 gem 'json', "~> 1.4.6"
+gem 'rack-flash'
 gem 'thin'
+gem 'sinatra-contrib'
+gem 'googlecharts'
+gem 'sinatra-r18n'
