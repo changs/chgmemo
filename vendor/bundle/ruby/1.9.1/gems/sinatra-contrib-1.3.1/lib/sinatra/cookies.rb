@@ -57,7 +57,7 @@ module Sinatra
     class Jar
       include Enumerable
       attr_reader :options
-      attr_accessor :expires
+
       def initialize(app)
         @response_string = nil
         @response_hash   = {}
@@ -88,7 +88,7 @@ module Sinatra
       end
 
       def []=(key, value)
-        @response.set_cookie key.to_s, @options.merge(:value => value, expires: expires)
+        @response.set_cookie key.to_s, @options.merge(:value => value)
       end
 
       def assoc(key)

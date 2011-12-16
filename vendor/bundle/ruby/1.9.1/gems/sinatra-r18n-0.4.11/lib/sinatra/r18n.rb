@@ -36,7 +36,7 @@ module Sinatra #::nodoc::
           if params[:locale]
             locales.insert(0, params[:locale])
           elsif session[:locale]
-            locales.insert(0, session[:locale].code)
+            locales.insert(0, session[:locale])
           end
 
           ::R18n::I18n.new(locales, settings.translations)
