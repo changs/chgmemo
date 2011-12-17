@@ -114,5 +114,6 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
+User.first.update(admin: true)
 Locale.first_or_create(code: 'en')
 Locale.first_or_create(code: 'pl')
