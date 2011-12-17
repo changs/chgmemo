@@ -4,19 +4,17 @@ require 'haml'
 require "sinatra/cookies"
 require 'gchart'
 require 'date'
-require 'sinatra/r18n'
+require './sinatra_r18n'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 set :haml, :format => :html5
 use Rack::Session::Pool, :expire_after => 2592000
 use Rack::Flash
 
-
-
 before do
   @title = "ChgMemo"
   session[:locale] ||= Locale.get(1)
-  session[:locale] = Locale.get(current_user.locale) if logged_in?
+  session[:locale] = Locale.get(current_user.locale) if logged_in? #biblioteka zmieniona
 end
 
 before '/item/*' do
