@@ -109,8 +109,8 @@ class Locale
 
 end
 
-#DataMapper::setup(:default, "sqlite3://#{File.expand_path(File.dirname(__FILE__))}/database.db")
-DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+DataMapper::setup(:default, "sqlite3://#{File.expand_path(File.dirname(__FILE__))}/database.db")
+#DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
