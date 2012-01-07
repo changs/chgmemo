@@ -20,6 +20,9 @@
                 %a{ href: "/items" }= t.header.items
               %li
                 %a{ href: "/user" }= t.header.profile
+              -if current_user.admin
+                %li
+                  %a{ href: "/user" } Admin
           - unless logged_in?
             =partial :login
           - else
